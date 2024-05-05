@@ -53,13 +53,16 @@ let date4 = "oops" as Date
 
 //! Function arguments and return values
 
-// function add(a, b) {
-//   return a + b // strings? numbers? a mix?
-// }
 
-// const result = add(3, "4")
-// const p = new Promise(result);
+function add(a: number, b: number): number {
+  if (Math.random() > 0.5) return a + b // strings? numbers? a mix?
+}
 
-/**/
+const result = add(3, 4)
+result.toExponential()
+
+const p = new Promise((resolve) => {
+  resolve(result)
+})
 
 export default {}
